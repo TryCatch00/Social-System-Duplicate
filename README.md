@@ -3,6 +3,7 @@
 An open source project inspired by social media projects.
 
 <h2 align="center">Releases 🔻</h2>
+<a href="#">Alfa v0.0.2</a>
 <hr>
 <a href="#">Pre-Alfa v0.0.1</a>
 <hr>
