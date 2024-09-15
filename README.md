@@ -11,6 +11,7 @@ You can use your project with the following conditions:
 5. After sharing the project, you should share it openly.
 
 # Creadits ⓘ
-[![](https://github.com/user-attachments/assets/2d47f352-d454-44e9-a30f-312c0fa1064e)](https://github.com/p0unter)
+[![](https://github.com/user-attachments/assets/af9bc262-21dd-49be-820c-99d5da9a6d17)](https://github.com/p0unter)
+[![](https://github.com/user-attachments/assets/639bd710-094b-4d99-b5c9-a0e716de6b10)](https://github.com/Mal1koRe1ss)
 <p align="left"><b>GitHub · @p0unter <a href="https://github.com/p0unter">Go</a></p> </b>
 <p align="left"><b>GitHub · @Mal1koRe1ss <a href="https://github.com/Mal1koRe1ss">Go</a></p> 
