@@ -3,9 +3,9 @@
 An open source project inspired by social media projects.
 
 <h2 align="center">Releases 🔻</h2>
-<a href="#" align="center"><p align="left">Alfa v0.0.2</p></a>
+<p align="left"><a href="#" align="center">Alfa v0.0.2</a></p>
 <hr>
-<a href="#" align="center"><p align="left">Pre-Alfa v0.0.1</p></a>
+<p align="left"><a href="#" align="center">Pre-Alfa v0.0.1</a></p>
 <hr>
 
 # License 📕
