@@ -1,3 +1,4 @@
+![MasterHead](https://github.com/user-attachments/assets/ca45ac5f-856c-4863-a23e-7b2b986eb19c)
 # Social-System-Duplicate
 It is a Social Media System Early-Access project inspired by YouTube.
 
