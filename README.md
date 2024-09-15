@@ -14,5 +14,5 @@ You can use your project with the following conditions:
 [![](https://github.com/user-attachments/assets/fd93ec52-5267-4ada-8e4c-e745fe444a40)](https://github.com/p0unter)
 [![](https://github.com/user-attachments/assets/cdde5419-84cf-4562-9607-0a5ca5609412)](https://github.com/Mal1koRe1ss)
 <p align="center"><b>
-  - Profile gitmek için resme tıklayın.</p>
+  · Click on the picture to go to profile ·</p>
 </b>
