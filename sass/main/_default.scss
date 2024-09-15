@@ -2,6 +2,7 @@
 
 * {
     cursor: default;
+    outline: none;
 }
 
 .pointer {
@@ -55,6 +56,17 @@ a {
 
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
+}
+
+input[type=text] {
+    background-color: transparent;
+    color: $dark-color;
+    padding: 0px 30px;
+    font-size: .6rem;
+    font-family: Hind-Bold !important;
+    border: 1px solid $dark-color;
+    border-radius: 5px;
+    cursor: text;
 }
 
 img {
@@ -117,3 +129,8 @@ li {
     }
 }
 
+.five-button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
