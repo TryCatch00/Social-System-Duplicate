@@ -1,6 +1,6 @@
 ![MasterHead](https://github.com/user-attachments/assets/ca45ac5f-856c-4863-a23e-7b2b986eb19c)
 # Social-System-Duplicate
-It is a Social Media System Early-Access project inspired by YouTube.
+An open source project inspired by social media projects.
 
 # License ©️
 You can use your project with the following conditions:
