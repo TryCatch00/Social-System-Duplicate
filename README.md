@@ -6,6 +6,9 @@ An open source project inspired by social media projects.
 <div align="center">
   <table>
     <tr>
+      <td><p align="center"><a href="#" align="center">v0.0.3</a></p></td>
+    </tr>
+    <tr>
       <td><p align="center"><a href="#" align="center">Alfa v0.0.2</a></p></td>
     </tr>
     <tr>
