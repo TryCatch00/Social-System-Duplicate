@@ -11,5 +11,4 @@ You can use your project with the following conditions:
 
 # Creadits
 GitHub · @p0unter 
-
 GitHub · @Mal1koRe1ss 
