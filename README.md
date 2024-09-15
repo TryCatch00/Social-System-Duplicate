@@ -2,6 +2,9 @@
 # Social-System-Duplicate
 An open source project inspired by social media projects.
 
+# Releases 🔻
+<a href="#">Pre-Alfa v0.0.1</a>
+
 # License 📕
 You can use your project with the following conditions:
 1. You can use the project for personal or commercial purposes.
