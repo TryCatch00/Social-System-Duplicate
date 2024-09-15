@@ -11,6 +11,7 @@
 html {
     font-family: Hind-Medium, sans-serif;
     background-color: $dark-bg;
+    color: $dark-color;
     font-size: 20px;
 }
 
@@ -25,27 +26,34 @@ body {
     margin: 0 auto;
 }
 
-button {
+a {
+    text-decoration: none;
+}
+
+.button-class {
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    gap: 5px;
-    background-color: transparent;
     font-size: .8rem;
-    color: $dark-color;
+    gap: 5px;
+    border: none;
+    transition: all .1s ease-in;
     cursor: pointer;
-    transition: opacity .1s ease-in-out;
-    border: 1px solid $dark-color;
-    padding: 5px 10px;
+    background-color: transparent;
+    color: $dark-color;
     border-radius: 5px;
 
     &:hover {
-        opacity: .8;
+        opacity: 1;
+        background-color: $hover-bg;
     }
 
-    img {
-        height: 100%;
+    &:active {
+        outline: .5px solid #ffffff14;
+        background-color: $active-bg;
+
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 }
 
@@ -108,3 +116,4 @@ li {
         }
     }
 }
+

@@ -1,20 +1,29 @@
 @charset "UTF-8";
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+#navbar #navbar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
 #navbar #navbar-title #left-bar-button {
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  border: none;
-  padding: 8.8px;
-  transition: all 0.1s ease-in;
+  width: 40px;
+  height: 40px;
 }
-#navbar #navbar-title #left-bar-button:hover {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.1529411765);
+#navbar #navbar-title #home-page-rooter {
+  padding: 5px 5px;
+  gap: 0;
 }
-#navbar #navbar-title #left-bar-button:active {
-  outline: 0.5px solid rgba(255, 255, 255, 0.0784313725);
-  background-color: rgba(255, 255, 255, 0.2352941176);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+#navbar #navbar-title #home-page-rooter #country-lower {
+  font-size: 0.3rem;
+  position: relative;
+  transform: translateY(-8px);
 }
 
 * {
@@ -28,6 +37,7 @@
 html {
   font-family: Hind-Medium, sans-serif;
   background-color: rgb(20, 20, 20);
+  color: rgb(226, 226, 226);
   font-size: 20px;
 }
 
@@ -42,26 +52,32 @@ body {
   margin: 0 auto;
 }
 
-button {
+a {
+  text-decoration: none;
+}
+
+.button-class {
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  gap: 5px;
-  background-color: transparent;
   font-size: 0.8rem;
-  color: rgb(226, 226, 226);
+  gap: 5px;
+  border: none;
+  transition: all 0.1s ease-in;
   cursor: pointer;
-  transition: opacity 0.1s ease-in-out;
-  border: 1px solid rgb(226, 226, 226);
-  padding: 5px 10px;
+  background-color: transparent;
+  color: rgb(226, 226, 226);
   border-radius: 5px;
 }
-button:hover {
-  opacity: 0.8;
+.button-class:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1529411765);
 }
-button img {
-  height: 100%;
+.button-class:active {
+  outline: 0.5px solid rgba(255, 255, 255, 0.0784313725);
+  background-color: rgba(255, 255, 255, 0.2352941176);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 img {
