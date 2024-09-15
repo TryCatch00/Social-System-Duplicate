@@ -8,3 +8,7 @@ You can use your project with the following conditions:
 3. On each copy of the project or modified version, you must leave my signature and ads for the project visible.
 4. When you change the project, you must clearly indicate the changes.
 5. After sharing the project, you should share it openly.
+
+# Creadits
+GitHub · @p0unter 
+GitHub · @Mal1koRe1ss 
