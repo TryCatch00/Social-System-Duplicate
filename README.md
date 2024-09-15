@@ -9,7 +9,7 @@ You can use your project with the following conditions:
 4. When you change the project, you must clearly indicate the changes.
 5. After sharing the project, you should share it openly.
 
-# Creadits 💳
+# Creadits ⓘ
 <p align="left"><b>GitHub · @p0unter</b></p>
 <p align="left"><b>GitHub · @Mal1koRe1ss</b></p>
 
