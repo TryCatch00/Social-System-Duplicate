@@ -19,6 +19,6 @@ You can use your project with the following conditions:
 
 # SOCiAL 💕
 <p align="left">
-<a href="https://www.youtube.com/@trycatch00" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@trycatch00" height="30" width="40" /></a>
-<a href="https://discord.com/invite/kuwTqvhGcM" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="https://discordapp.com/users/652861592622333979" height="30" width="40" /></a>
+<a href="https://www.youtube.com/@trycatch00" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@trycatch00" height="30" width="40" /> YouTube</a>
+<a href="https://discord.com/invite/kuwTqvhGcM" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="https://discordapp.com/users/652861592622333979" height="30" width="40" /> Discord Server</a>
 </p>
