@@ -3,9 +3,14 @@
 An open source project inspired by social media projects.
 
 <h2 align="center">Releases 🔻</h2>
-<p align="center"><a href="#" align="center">Alfa v0.0.2</a></p>
-<hr>
-<p align="center"><a href="#" align="center">Pre-Alfa v0.0.1</a></p>
+<table>
+  <tr>
+    <td><p align="center"><a href="#" align="center">Alfa v0.0.2</a></p></td>
+  </tr>
+  <tr>
+    <td><p align="center"><a href="#" align="center">Pre-Alfa v0.0.1</a></p></td>
+  </tr>
+</table>
 
 # License 📕
 You can use your project with the following conditions:
