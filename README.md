@@ -6,7 +6,6 @@ An open source project inspired by social media projects.
 <p align="center"><a href="#" align="center">Alfa v0.0.2</a></p>
 <hr>
 <p align="center"><a href="#" align="center">Pre-Alfa v0.0.1</a></p>
-<hr>
 
 # License 📕
 You can use your project with the following conditions:
