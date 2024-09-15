@@ -3,7 +3,9 @@
 An open source project inspired by social media projects.
 
 # Releases 🔻
+<hr>
 <a href="#">Pre-Alfa v0.0.1</a>
+<hr>
 
 # License 📕
 You can use your project with the following conditions:
