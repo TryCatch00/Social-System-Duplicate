@@ -13,9 +13,8 @@ You can use your project with the following conditions:
 # Creadits 📌
 [![](https://github.com/user-attachments/assets/fd93ec52-5267-4ada-8e4c-e745fe444a40)](https://github.com/p0unter)
 [![](https://github.com/user-attachments/assets/cdde5419-84cf-4562-9607-0a5ca5609412)](https://github.com/Mal1koRe1ss)
-<p align="center"><b>
-  · Click on the picture to go to profile ·</p>
-</b>
+<p align="center"><i>· Click on the picture to go to profile ·</i></p>
+
 
 # SOCiAL 💕
 <p align="left">
