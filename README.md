@@ -11,5 +11,6 @@ You can use your project with the following conditions:
 5. After sharing the project, you should share it openly.
 
 # Creadits ⓘ
+[![](https://github.com/p0unter)](https://visitcount.itsvg.in)
 <p align="left"><b>GitHub · @p0unter <a href="https://github.com/p0unter">Go</a></p> </b>
 <p align="left"><b>GitHub · @Mal1koRe1ss <a href="https://github.com/Mal1koRe1ss">Go</a></p> 
