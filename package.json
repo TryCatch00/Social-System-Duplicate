@@ -8,7 +8,7 @@
     "asset-sass": "sass --watch sass/assets/:css/assets"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mal1koRe1ss,Pounter",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.78.0"
