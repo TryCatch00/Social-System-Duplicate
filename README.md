@@ -2,7 +2,7 @@
 # Social-System-Duplicate
 An open source project inspired by social media projects.
 
-<p align="center">Releases 🔻</p>
+<h2 align="center">Releases 🔻</h2>
 <hr>
 <a href="#">Pre-Alfa v0.0.1</a>
 <hr>
