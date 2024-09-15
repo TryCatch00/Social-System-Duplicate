@@ -1,0 +1,59 @@
+/* HIND */
+@font-face {
+    font-family: Hind-Bold;                                                                                                     
+    src: url(../asset/fonts/Hind/Hind-Bold.ttf);
+}
+
+@font-face {
+    font-family: Hind-Medium;
+    src: url(../asset/fonts/Hind/Hind-Medium.ttf);
+}
+
+@font-face {
+    font-family: Hind-Light;
+    src: url(../asset/fonts/Hind/Hind-Light.ttf);
+}
+
+p {
+    font-family: Hind-Medium, sans-serif;
+}
+
+/* MULI */
+@font-face {
+    font-family: Muli-Medium;
+    src: url(../asset/fonts/Muli/muli.regular.ttf);
+}
+
+@font-face {
+    font-family: Muli-Light;
+    src: url(../asset/fonts/Muli/muli.light.ttf);
+}
+
+@font-face {
+    font-family: Muli-Italic;
+    src: url(../asset/fonts/Muli/muli.light-italic.ttf);
+}
+
+h2 {
+    font-family: Muli-Medium, sans-serif;
+}
+
+/* MONTSERRAT */
+@font-face {
+    font-family: Mont-Light;
+    src: url(../asset/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Mont-Bold;
+    src: url(../asset/fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Mont-Italic;
+    src: url(../asset/fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+}
+
+h1 {
+    font-family: Mont-Bold, sans-serif;
+}

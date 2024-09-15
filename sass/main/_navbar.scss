@@ -1,0 +1,25 @@
+@import "variables";
+#navbar {
+    #navbar-title {
+        #left-bar-button {
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            border: none;
+            padding: 8.8px;
+            transition: all .1s ease-in;
+
+            &:hover {
+                opacity: 1;
+                background-color: $hover-bg;
+            }
+
+            &:active {
+                outline: .5px solid #ffffff14;
+                background-color: $active-bg;
+
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            }
+        }
+    }
+}

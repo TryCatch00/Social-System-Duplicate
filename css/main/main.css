@@ -1,3 +1,216 @@
+@charset "UTF-8";
+#navbar #navbar-title #left-bar-button {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  border: none;
+  padding: 8.8px;
+  transition: all 0.1s ease-in;
+}
+#navbar #navbar-title #left-bar-button:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1529411765);
+}
+#navbar #navbar-title #left-bar-button:active {
+  outline: 0.5px solid rgba(255, 255, 255, 0.0784313725);
+  background-color: rgba(255, 255, 255, 0.2352941176);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
 
+* {
+  cursor: default;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+html {
+  font-family: Hind-Medium, sans-serif;
+  background-color: rgb(20, 20, 20);
+  font-size: 20px;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  gap: 5px;
+  background-color: transparent;
+  font-size: 0.8rem;
+  color: rgb(226, 226, 226);
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+  border: 1px solid rgb(226, 226, 226);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+button:hover {
+  opacity: 0.8;
+}
+button img {
+  height: 100%;
+}
+
+img {
+  pointer-events: none;
+}
+
+li {
+  list-style: none;
+}
+
+.custom-hr {
+  width: 100%;
+  background-color: #fff;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(0, 0, 0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  margin-top: 20px;
+}
+.custom-hr span {
+  font-family: Hind-Bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.separator .hr {
+  width: 100%;
+  height: 0.5px;
+  background-color: #fff;
+}
+.separator .separator-title {
+  position: relative;
+  display: flex;
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-family: Muli-Italic;
+  font-size: 0.8rem;
+}
+.separator .separator-title .title-lower {
+  text-transform: lowercase;
+  font-size: 0.5rem;
+  position: absolute;
+  top: -15px;
+}
+
+/* HIND */
+@font-face {
+  font-family: Hind-Bold;
+  src: url(../asset/fonts/Hind/Hind-Bold.ttf);
+}
+@font-face {
+  font-family: Hind-Medium;
+  src: url(../asset/fonts/Hind/Hind-Medium.ttf);
+}
+@font-face {
+  font-family: Hind-Light;
+  src: url(../asset/fonts/Hind/Hind-Light.ttf);
+}
+p {
+  font-family: Hind-Medium, sans-serif;
+}
+
+/* MULI */
+@font-face {
+  font-family: Muli-Medium;
+  src: url(../asset/fonts/Muli/muli.regular.ttf);
+}
+@font-face {
+  font-family: Muli-Light;
+  src: url(../asset/fonts/Muli/muli.light.ttf);
+}
+@font-face {
+  font-family: Muli-Italic;
+  src: url(../asset/fonts/Muli/muli.light-italic.ttf);
+}
+h2 {
+  font-family: Muli-Medium, sans-serif;
+}
+
+/* MONTSERRAT */
+@font-face {
+  font-family: Mont-Light;
+  src: url(../asset/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Mont-Bold;
+  src: url(../asset/fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: Mont-Italic;
+  src: url(../asset/fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+}
+h1 {
+  font-family: Mont-Bold, sans-serif;
+}
+
+/* MEDİA QERYS */
+@media (min-width: 575.98px) {
+  html {
+    font-size: 22px;
+  }
+  .container {
+    width: 88%;
+  }
+}
+@media (min-width: 767.98px) {
+  html {
+    font-size: 23px;
+  }
+  .container {
+    width: 86%;
+  }
+}
+@media (min-width: 991.98px) {
+  html {
+    font-size: 24px;
+  }
+  .container {
+    width: 84%;
+  }
+}
+@media (min-width: 1199.98px) {
+  html {
+    font-size: 25px;
+  }
+  .container {
+    width: 82%;
+  }
+}
+@media (min-width: 1399.98px) {
+  html {
+    font-size: 26px;
+  }
+  .container {
+    width: 80%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
