@@ -10,6 +10,6 @@ You can use your project with the following conditions:
 5. After sharing the project, you should share it openly.
 
 # Creadits ⓘ
-<p align="left"><b>GitHub · @p0unter</b></p>
-<p align="left"><b>GitHub · @Mal1koRe1ss</b></p>
+<p align="left"><b>GitHub · @p0unter</b></p> <a>https://github.com/p0unter</a>
+<p align="left"><b>GitHub · @Mal1koRe1ss</b></p> <a>https://github.com/Mal1koRe1ss</a>
 
