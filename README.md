@@ -1,7 +1,7 @@
 # Social-System-Duplicate
 It is a Social Media System Early-Access project inspired by YouTube.
 
-# Lisence
+# License
 You can use your project with the following conditions:
 1. You can use the project for personal or commercial purposes.
 2. You should avoid removing ads and my signature on the project.
