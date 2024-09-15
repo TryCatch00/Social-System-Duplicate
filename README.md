@@ -11,5 +11,5 @@ You can use your project with the following conditions:
 
 # Creadits
 <p align="center"><b>GitHub · @p0unter</b></p>
-<p align="center"><b>GitHub · @Mal1koRe1ss/b></p>
+<p align="center"><b>GitHub · @Mal1koRe1ss</b></p>
 
