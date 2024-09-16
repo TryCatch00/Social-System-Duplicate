@@ -4,7 +4,7 @@
   "description": "It is a Social Media System Early-Access project inspired by YouTube.",
   "main": "index.js",
   "scripts": {
-    "main-sass": "sass --watch sass/main/:css/main"
+    "main-sass": "sass --watch sass/:css/"
   },
   "keywords": [],
   "author": "Mal1koRe1ss,Pounter",

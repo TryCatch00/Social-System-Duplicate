@@ -12,8 +12,9 @@
   gap: 5px;
 }
 #navbar #navbar-title #home-page-rooter {
-  padding: 5px 5px;
+  font-family: Mont-Light, sans-serif;
   gap: 0;
+  font-size: 1rem;
 }
 #navbar #navbar-title #home-page-rooter #country-lower {
   font-size: 0.3rem;
@@ -28,29 +29,47 @@
 #navbar #search-bar #by-search {
   display: flex;
   align-items: center;
-  height: 35px;
-  width: 400px;
+  height: 40px;
+  width: 500px;
+}
+#navbar #search-bar #by-search #input-cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
-#navbar #search-bar #by-search #focus-search {
+#navbar #search-bar #by-search #input-cont #focus-search {
   position: absolute;
-  left: 5px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   height: 25px;
   width: 25px;
   opacity: 0.5;
 }
-#navbar #search-bar #by-search #focus-search img {
+#navbar #search-bar #by-search #input-cont #focus-search img {
   width: 100%;
 }
-#navbar #search-bar #by-search input[type=text] {
+#navbar #search-bar #by-search #input-cont input[type=text] {
   width: 100%;
   height: 100%;
   border-radius: 30px 0 0 30px;
+  padding: 0 40px 0 40px;
 }
-#navbar #search-bar #by-search input[type=text]:focus {
-  border: 1px solid rgb(47, 47, 137);
+#navbar #search-bar #by-search #input-cont input[type=text]:focus {
+  border: 1px solid #ADD8E6;
+}
+#navbar #search-bar #by-search #input-cont #resetButton {
+  opacity: 0;
+  transition: 0.3s opacity ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 30px;
+  pointer-events: none;
 }
 #navbar #search-bar #by-search #search-button {
   width: 45px;
@@ -59,6 +78,7 @@
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-radius: 0 30px 30px 0;
+  padding: 10px 30px;
 }
 #navbar #search-bar #mic-button {
   border: 1px solid rgb(226, 226, 226);
@@ -68,10 +88,18 @@
   align-items: center;
   gap: 10px;
 }
-#navbar #tools #notification {
+#navbar #tools #avatar {
+  background-color: transparent;
+  border: none;
+}
+#navbar #tools #avatar img {
+  width: 100%;
+}
+
+#notification {
   position: relative;
 }
-#navbar #tools #notification #intensity-icon {
+#notification #intensity-icon {
   position: absolute;
   background-color: rgb(255, 0, 0);
   font-size: 0.5rem;
@@ -81,13 +109,6 @@
   border-radius: 10px;
   font-weight: 600;
   pointer-events: none;
-}
-#navbar #tools #avatar {
-  background-color: transparent;
-  border: none;
-}
-#navbar #tools #avatar img {
-  width: 100%;
 }
 
 * {
@@ -148,9 +169,9 @@ a {
 input[type=text] {
   background-color: transparent;
   color: rgb(226, 226, 226);
-  padding: 0px 30px;
+  padding: 0px 20px;
   font-size: 0.6rem;
-  font-family: Hind-Bold !important;
+  font-family: monospace !important;
   border: 1px solid rgb(226, 226, 226);
   border-radius: 5px;
   cursor: text;
@@ -213,23 +234,23 @@ li {
 }
 
 .five-button {
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
 }
 
 /* HIND */
 @font-face {
   font-family: Hind-Bold;
-  src: url(../asset/fonts/Hind/Hind-Bold.ttf);
+  src: url(../font/Hind/Hind-Bold.ttf);
 }
 @font-face {
   font-family: Hind-Medium;
-  src: url(../asset/fonts/Hind/Hind-Medium.ttf);
+  src: url(../font/Hind/Hind-Medium.ttf);
 }
 @font-face {
   font-family: Hind-Light;
-  src: url(../asset/fonts/Hind/Hind-Light.ttf);
+  src: url(../font/Hind/Hind-Light.ttf);
 }
 p {
   font-family: Hind-Medium, sans-serif;
@@ -238,15 +259,15 @@ p {
 /* MULI */
 @font-face {
   font-family: Muli-Medium;
-  src: url(../asset/fonts/Muli/muli.regular.ttf);
+  src: url(../font/Muli/muli.regular.ttf);
 }
 @font-face {
   font-family: Muli-Light;
-  src: url(../asset/fonts/Muli/muli.light.ttf);
+  src: url(../font/Muli/muli.light.ttf);
 }
 @font-face {
   font-family: Muli-Italic;
-  src: url(../asset/fonts/Muli/muli.light-italic.ttf);
+  src: url(../font/Muli/muli.light-italic.ttf);
 }
 h2 {
   font-family: Muli-Medium, sans-serif;
@@ -255,15 +276,15 @@ h2 {
 /* MONTSERRAT */
 @font-face {
   font-family: Mont-Light;
-  src: url(../asset/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: Mont-Bold;
-  src: url(../asset/fonts/Montserrat/static/Montserrat-Bold.ttf);
+  src: url(../font/Montserrat/static/Montserrat-Bold.ttf);
 }
 @font-face {
   font-family: Mont-Italic;
-  src: url(../asset/fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+  src: url(../font/Montserrat/static/Montserrat-BoldItalic.ttf);
 }
 h1 {
   font-family: Mont-Bold, sans-serif;
@@ -284,6 +305,9 @@ h1 {
   }
   .container {
     width: 86%;
+  }
+  #home-page-rooter {
+    font-size: 0.8rem !important;
   }
 }
 @media (min-width: 991.98px) {

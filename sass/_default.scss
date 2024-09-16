@@ -61,9 +61,9 @@ a {
 input[type=text] {
     background-color: transparent;
     color: $dark-color;
-    padding: 0px 30px;
+    padding: 0px 20px;
     font-size: .6rem;
-    font-family: Hind-Bold !important;
+    font-family: monospace !important;
     border: 1px solid $dark-color;
     border-radius: 5px;
     cursor: text;
@@ -130,7 +130,7 @@ li {
 }
 
 .five-button {
-    height: 35px;
-    width: 35px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
 }
