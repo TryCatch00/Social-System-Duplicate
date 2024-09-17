@@ -29,6 +29,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .button-class {
@@ -155,12 +156,14 @@ li {
 
 .info-element {
     position: absolute;
-    bottom: -12px;
+    bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
     font-size: .5rem;
     opacity: 0;
     pointer-events: none;
-    transition: 0.6s cubic-bezier(1,0,0,1);
+    transition: 0.25s cubic-bezier(1,0,0,1);
     width: max-content;
+    background-color: $hover-bg;
+    padding: 5px 10px;
 }
