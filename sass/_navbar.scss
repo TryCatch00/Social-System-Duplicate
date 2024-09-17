@@ -53,6 +53,9 @@
                     height: 25px;
                     width: 25px;
                     opacity: .5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
     
                     img {
                         width: 100%;
@@ -66,7 +69,7 @@
                     padding: 0 40px 0 40px;
     
                     &:focus {
-                        border: 1px solid #ADD8E6;
+                        border: 1px solid #23c8ff;
                     }
                 }
 
@@ -85,18 +88,20 @@
             
 
             #search-button {
-                width: 45px;
+                width: 65px;
                 height: 100%;
-                border-top: 1px solid #fff;
-                border-right: 1px solid #fff;
-                border-bottom: 1px solid #fff;
                 border-radius: 0 30px 30px 0;
-                padding: 10px 30px;
+                background-color: $hover-bg;
+                padding: 0 20px;
+
+                img {
+                    padding: 0;
+                }
             }
         }
 
         #mic-button {
-            border: 1px solid $dark-color;
+            
         }
     }
 
@@ -113,6 +118,23 @@
 
             img {
                 width: 100%;
+            }
+        }
+
+        #sign-in {
+            height: 100%;
+            padding: 5px 10px;
+            border: 1.2px solid #23c8ff;
+            border-radius: 40px;
+            color: #23c8ff;
+
+            span {
+                color: $dark-color;
+                bottom: -15px;
+            }
+
+            img {
+                width: 30px;
             }
         }
     }

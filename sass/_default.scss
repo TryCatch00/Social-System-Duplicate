@@ -44,6 +44,7 @@ a {
     background-color: transparent;
     color: $dark-color;
     border-radius: 5px;
+    padding: 11px;
 
     &:hover {
         opacity: 1;
@@ -58,19 +59,28 @@ a {
     }
 }
 
+.button-class-bg {
+    background-color: $hover-bg;
+
+    &:hover {
+        background-color: $active-bg !important;
+    }
+}
+
 input[type=text] {
     background-color: transparent;
     color: $dark-color;
     padding: 0px 20px;
     font-size: .6rem;
-    font-family: monospace !important;
-    border: 1px solid $dark-color;
+    font-family: sans-serif !important;
+    border: 1px solid $hover-bg;
     border-radius: 5px;
     cursor: text;
 }
 
 img {
     pointer-events: none;
+    width: auto;
 }
 
 li {
@@ -133,4 +143,24 @@ li {
     height: 45px;
     width: 45px;
     border-radius: 50%;
+}
+
+.info-element-button {
+    position: relative;
+
+    &:hover .info-element {
+        opacity: 1;
+    }
+}
+
+.info-element {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.6s cubic-bezier(1,0,0,1);
+    width: max-content;
 }
