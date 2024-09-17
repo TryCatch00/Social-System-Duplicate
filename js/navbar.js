@@ -68,23 +68,20 @@ function resetInput() {
 
     if (searchInput.value !== "") {
         searchInput.value = "";
-        toggleResetButton(""); // Butonu güncelle
+        toggleResetButton("");
     }
 }
 
 const mediaQuery = window.matchMedia('(max-width: 991px)');
 
-// Fonksiyon, koşul sağlandığında çalışacak kodu içerir
 function handleMediaChange(e) {
     if (e.matches) {
-        navbar.innerHTML = mobileInnerHTML; // Mobil görünüm
+        navbar.innerHTML = mobileInnerHTML;
     } else {
-        navbar.innerHTML = desktopInnerHTML; // Masaüstü görünümü
+        navbar.innerHTML = desktopInnerHTML;
     }
 }
 
-// Başlangıç durumu kontrolü
 handleMediaChange(mediaQuery);
 
-// Medya sorgusunu dinle
 mediaQuery.addListener(handleMediaChange);
