@@ -100,28 +100,31 @@
         flex-direction: column;
     }
 
-    #lisance-footer {
-        font-size: 15px;
-        text-align: center;
+    
+}
 
-        .rooter {
-            cursor: pointer;
-            border-right: 1px solid #fff;
-            border-left: 1px solid #fff;
-            padding-right: 5px;
-            padding-left: 5px;
-            border-radius: 5px;
-            width: max-content;
-            margin: 0 auto;
-            opacity: .5;
-            
-            &:hover {
-                opacity: 1;
-            }
-        }
+#lisance-footer {
+    font-size: 15px;
+    text-align: center;
+    height: 150px;
 
-        #copyright {
-            margin-top: 10px !important;
+    .rooter {
+        cursor: pointer;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+        padding-right: 5px;
+        padding-left: 5px;
+        border-radius: 5px;
+        width: max-content;
+        margin: 0 auto;
+        opacity: .5;
+        
+        &:hover {
+            opacity: 1;
         }
+    }
+
+    #copyright {
+        margin-top: 10px !important;
     }
 }

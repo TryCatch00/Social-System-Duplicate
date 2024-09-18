@@ -491,11 +491,13 @@ h1 {
   justify-content: center;
   flex-direction: column;
 }
-#left-bar #lisance-footer {
+
+#lisance-footer {
   font-size: 15px;
   text-align: center;
+  height: 150px;
 }
-#left-bar #lisance-footer .rooter {
+#lisance-footer .rooter {
   cursor: pointer;
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
@@ -506,10 +508,10 @@ h1 {
   margin: 0 auto;
   opacity: 0.5;
 }
-#left-bar #lisance-footer .rooter:hover {
+#lisance-footer .rooter:hover {
   opacity: 1;
 }
-#left-bar #lisance-footer #copyright {
+#lisance-footer #copyright {
   margin-top: 10px !important;
 }
 
