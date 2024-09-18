@@ -6,7 +6,7 @@
 }
 
 .pointer {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 html {
@@ -48,24 +48,16 @@ a {
     padding: 11px;
 
     &:hover {
-        opacity: 1;
-        background-color: $hover-bg;
+        background-color: $hover-bg !important;
     }
 
     &:active {
-        outline: .5px solid #ffffff14;
-        background-color: $active-bg;
-
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        background-color: $active-bg !important;
     }
 }
 
 .button-class-bg {
-    background-color: $hover-bg;
-
-    &:hover {
-        background-color: $active-bg !important;
-    }
+    background-color: #ffffff27;
 }
 
 input[type=text] {
@@ -88,24 +80,45 @@ li {
     list-style: none;
 }
 
+.default-hr {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #ffffff27;
+    margin: 20px auto;
+}
+
 .custom-hr {
+    display: flex;
+    align-items: center;
     width: 100%;
     background-color: #fff;
     height: 30px;
     border-radius: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     box-shadow: rgb(0, 0, 0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    margin-top: 20px;
+    margin-bottom: 20px;
 
-    span {
+    &:hover .text img {
+        margin-right: 10px;
+    }
+
+    .text {
         font-family: Hind-Bold;
-        font-size: 20px;
+        font-size: 20px !important;
         text-transform: uppercase;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        width: 100%;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+            transition: .3s;
+        }
     }
 }
 

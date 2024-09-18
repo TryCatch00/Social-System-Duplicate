@@ -26,6 +26,8 @@ if (!isLogin) {
 
     navbar.innerHTML = innerHTML;
     listenerFocus();
+
+    
 }
 
 const desktopInnerHTML = navbar.innerHTML;
@@ -33,11 +35,13 @@ const desktopInnerHTML = navbar.innerHTML;
 function toggleResetButton(value) {
     const resetButton = document.getElementById('resetButton');
     if (value !== "") {
-        resetButton.style.opacity = ".6";
-        resetButton.style.pointerEvents = "auto";
+        resetButton.style.opacity = "1"; 
+        resetButton.style.pointerEvents = "auto"; 
+        resetButton.disabled = false; 
     } else {
-        resetButton.style.opacity = "0";
-        resetButton.style.pointerEvents = "none";
+        resetButton.style.opacity = "0"; 
+        resetButton.style.pointerEvents = "none"; 
+        resetButton.disabled = true; 
     }
 }
 
@@ -48,6 +52,7 @@ function resetInput() {
     if (searchInput.value !== "") {
         searchInput.value = "";
         toggleResetButton("");
+        searchInput.focus();
     }
 }
 
@@ -90,3 +95,4 @@ function listenerFocus() {
         searchInput.placeholder = "Search";
     });
 }
+
