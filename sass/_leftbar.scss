@@ -1,4 +1,5 @@
 @import "variables";
+
 .button-bor {
     .just-button {
         border-radius: 0;
@@ -12,30 +13,35 @@
         border-radius: 0 0 10px 10px;
     }
 }
+
 #left-bar {
-    position: fixed;
     left: 0;
-    height: 100%;
+    height: calc(100vh - 11.9vh);
     max-width: 260px;
     overflow: auto;
     padding-bottom: 10px;
 
-    &::-webkit-scrollbar {
-        width: 5px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: #ffffff9e;
-        border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
-
     .bar-container {
         width: 85% !important;
         margin: 0 auto;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px; 
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; 
+        border-radius: 10px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $hover-bg; 
+        border-radius: 10px; 
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $active-bg; 
     }
 
     button {
@@ -52,7 +58,6 @@
         display: flex;
         justify-content: space-between !important;
         font-family: Muli-Light;
-        padding: 20px 10px;
 
         .icon {
             width: 30px;
@@ -63,9 +68,7 @@
             text-align: left;
             padding-left: 15px;
         }
-    }
 
-    .just-button {
         width: 100%;
         max-height: 40px !important;
     }
@@ -79,52 +82,69 @@
         }
     }
 
-    #tools {
+    #tools, #you, #my-subscriptions {
         display: flex;
         width: 100%;
         justify-content: center;
         flex-direction: column;
     }
-
-    #you {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    #my-subscriptions {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    
 }
 
 #lisance-footer {
     font-size: 15px;
     text-align: center;
-    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-    .rooter {
-        cursor: pointer;
-        border-right: 1px solid #fff;
-        border-left: 1px solid #fff;
-        padding-right: 5px;
-        padding-left: 5px;
-        border-radius: 5px;
-        width: max-content;
-        margin: 0 auto;
-        opacity: .5;
-        
+    #buttons-cont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 2px solid $hover-bg;
+        border-radius: 10px;
+        transition: .3s;
+
         &:hover {
-            opacity: 1;
+            border-radius: 50px;
         }
     }
 
-    #copyright {
+    .just-button {
+        border-radius: 0;
+    }
+
+    .just-button:first-of-type {
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .just-button:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .rooter {
+        cursor: pointer;
+        padding-right: 5px;
+        padding-left: 5px;
+        width: max-content;
+        opacity: .5;
+        width: calc(100% - 60%);
+        transition: .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:last-child {
+            border: none !important;
+        }
+    }
+
+    #last-child-rooter {
+        width: 100% !important;
         margin-top: 10px !important;
     }
 }

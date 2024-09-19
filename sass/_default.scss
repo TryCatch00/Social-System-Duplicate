@@ -92,13 +92,12 @@ li {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: #fff;
+    background-color: transparent;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: left;
     align-items: center;
-    box-shadow: rgb(0, 0, 0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     margin-bottom: 20px;
 
     &:hover .text img {
@@ -179,4 +178,11 @@ li {
     width: max-content;
     background-color: $hover-bg;
     padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 20px !important;
+    }
 }
