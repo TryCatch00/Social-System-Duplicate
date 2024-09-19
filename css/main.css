@@ -465,13 +465,14 @@ h1 {
   justify-content: space-between !important;
   font-family: Muli-Light;
   width: 100%;
-  max-height: 40px !important;
+  max-height: 40px;
 }
 #left-bar .just-button .icon {
   width: 30px;
 }
 #left-bar .just-button .text {
   width: 100%;
+  overflow: hidden;
   text-align: left;
   padding-left: 15px;
 }
@@ -537,6 +538,25 @@ h1 {
 #lisance-footer #last-child-rooter {
   width: 100% !important;
   margin-top: 10px !important;
+}
+
+.mini-left-bar {
+  width: 110px;
+}
+.mini-left-bar .just-button {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100px !important;
+}
+.mini-left-bar .just-button .icon {
+  width: 30px;
+}
+.mini-left-bar .just-button .text {
+  font-size: 15px;
+  width: 100% !important;
+  text-align: center !important;
+  padding-left: 0px !important;
 }
 
 /*# sourceMappingURL=main.css.map */
