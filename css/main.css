@@ -559,4 +559,11 @@ h1 {
   padding-left: 0px !important;
 }
 
+@-moz-document url-prefix() {
+  #left-bar {
+    scrollbar-width: thin;
+    scrollbar-color: #1e202a;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
