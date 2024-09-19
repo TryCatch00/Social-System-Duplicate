@@ -1,11 +1,14 @@
 const navbar = document.getElementById("navbar");
 
+let homePageRooterText = document.getElementById("siteTitle");
+let siteTitle = homePageRooterText.textContent;
+
 let isLogin = true;
 if (!isLogin) {
     let innerHTML = `
         <div id="navbar-title">
             <button id="left-bar-button" class="button-class five-button info-element-button"><img src="img/icon/menu-icon.svg" alt="Bar"><span class="info-element">Menu</span></button>
-            <a href="index.html" class="button-class info-element-button" id="home-page-rooter"><span class="info-element">Home Page</span>Social System <span id="country-lower">EN</span></a>
+            <a href="index.html" class="button-class info-element-button" id="home-page-rooter"><img src="img/siteicon-img.png" alt=""><span class="info-element">Home Page</span>${siteTitle} <span id="country-lower">EN</span></a>
         </div>
         <div id="search-bar">
             <div id="by-search">
@@ -62,7 +65,7 @@ function handleMediaChange(e) {
     if (e.matches) {
         let mobileInnerHTML = `
             <div id="navbar-title">
-                <a href="index.html" class="button-class" id="home-page-rooter" style="padding: 10px 10px;">Social System <span id="country-lower">EN</span></a>
+                <a href="index.html" class="button-class" id="home-page-rooter" style="padding: 10px 10px;"><img src="img/siteicon-img.png" alt="">${siteTitle} <span id="country-lower">EN</span></a>
             </div>
             <div id="search-bar">
                 <button id="mobile-mic-button" class="button-class five-button"><img src="img/icon/mic-icon.svg" alt="Mic"></button>
