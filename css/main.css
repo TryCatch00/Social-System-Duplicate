@@ -448,11 +448,11 @@ h1 {
   border-radius: 10px;
 }
 #left-bar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1529411765);
+  background: transparent;
   border-radius: 10px;
 }
 #left-bar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2352941176);
+  background: rgba(255, 255, 255, 0.1529411765) !important;
 }
 #left-bar button img {
   width: 30px;
@@ -557,6 +557,13 @@ h1 {
   width: 100% !important;
   text-align: center !important;
   padding-left: 0px !important;
+}
+
+#left-bar:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1529411765);
+}
+#left-bar:hover::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.2352941176) !important;
 }
 
 @-moz-document url-prefix() {

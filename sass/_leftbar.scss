@@ -27,7 +27,7 @@
     }
 
     &::-webkit-scrollbar {
-        width: 10px; 
+        width: 10px;
     }
 
     &::-webkit-scrollbar-track {
@@ -36,12 +36,13 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background: $hover-bg; 
+        background: transparent; 
         border-radius: 10px; 
+
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: $active-bg; 
+        background: $hover-bg !important; 
     }
 
     button {
@@ -153,7 +154,7 @@
 // MINI
 .mini-left-bar {
     width: 110px;
-    
+
     .just-button {
         flex-direction: column;
         justify-content: center;
@@ -173,11 +174,21 @@
     }
 }
 
+#left-bar:hover {
+    &::-webkit-scrollbar-thumb {
+        background: $hover-bg; 
+    }
 
-    // Mozilla
-    @-moz-document url-prefix() {
-        #left-bar {
-          scrollbar-width: thin;
-          scrollbar-color: #1e202a;
-        }
-      } 
+    &::-webkit-scrollbar-thumb:active {
+        background: $active-bg !important; 
+    }
+}
+
+
+// Mozilla
+@-moz-document url-prefix() {
+    #left-bar {
+        scrollbar-width: thin;
+        scrollbar-color: #1e202a;
+    }
+} 
