@@ -92,7 +92,7 @@
                     padding: 0 40px 0 40px;
     
                     &:focus {
-                        border: 1px solid #23c8ff;
+                        border: 1px solid $focus-color;
                     }
                 }
 
@@ -152,9 +152,9 @@
         #sign-in {
             height: 100%;
             padding: 5px 10px;
-            border: 1.2px solid #23c8ff;
+            border: 1.2px solid $focus-color;
             border-radius: 40px;
-            color: #23c8ff;
+            color: $focus-color;
             font-size: .6rem !important;
 
             img {

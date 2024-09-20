@@ -4,9 +4,9 @@ const leftBar = document.getElementById("left-bar");
 
 const leftMiniBarinnerHTML = `
     <div id="tools" class="bar-container button-bor">
-        <button class="just-button button-class pointer just-active"><img src="img/icon/home-icon.svg" class="icon pointer"><span class="text pointer">Home Page</span></button>
-        <button class="just-button button-class pointer"><img src="img/icon/sub-icon.svg" class="icon pointer"><span class="text pointer">Subs</span></button>
-        <button class="just-button button-class pointer"><img src="img/icon/music-icon.svg" class="icon pointer"><span class="text pointer">Music</span></button>
+            <button class="just-button button-class pointer just-active"><img src="img/icon/home-icon.svg" class="icon pointer"><span class="text pointer">Home Page</span></button>
+            <button class="just-button button-class pointer"><img src="img/icon/sub-icon.svg" class="icon pointer"><span class="text pointer">Subs</span></button>
+            <button class="just-button button-class pointer"><img src="img/icon/music-icon.svg" class="icon pointer"><span class="text pointer">Music</span></button>
     </div>
     <div class="default-hr"></div>
     <div id="you" class="bar-container button-bor">
@@ -15,8 +15,8 @@ const leftMiniBarinnerHTML = `
         <button class="just-button button-class pointer"><img src="img/icon/playlist-icon.svg" class="icon pointer"><span class="text pointer">Play List</span></button>
         <button class="just-button button-class pointer"><img src="img/icon/time-icon.svg" class="icon pointer"><span class="text pointer">Watch Later</span></button>
         <button class="just-button button-class pointer"><img src="img/icon/like-icon.svg" class="icon pointer"><span class="text pointer">Videos I Like</span></button>
-    </div>
-    <div class="default-hr"></div>
+    </div></div>
+    <div class="default-hr">
     <div id="discover" class="bar-container button-bor">
         <button class="just-button button-class pointer"><img src="img/icon/hot-icon.svg" class="icon pointer"><span class="text pointer">Trends</span></button>
         <button class="just-button button-class pointer"><img src="img/icon/music-icon-2.svg" class="icon pointer"><span class="text pointer">Music</span></button>

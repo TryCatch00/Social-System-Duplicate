@@ -558,7 +558,6 @@ h1 {
   text-align: center !important;
   padding-left: 0px !important;
 }
-
 #left-bar:hover::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1529411765);
 }
