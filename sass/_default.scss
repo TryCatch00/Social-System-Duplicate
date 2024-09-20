@@ -54,6 +54,10 @@ a {
     &:active {
         background-color: $active-bg !important;
     }
+
+    img {
+        width: 20px;
+    }
 }
 
 .button-class-bg {
@@ -185,4 +189,9 @@ li {
     img {
         width: 20px !important;
     }
+}
+
+.button-alt {
+    position: fixed;
+    width: 300px;
 }

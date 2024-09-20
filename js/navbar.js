@@ -99,3 +99,20 @@ function listenerFocus() {
     });
 }
 
+const avatarCont = document.getElementById("account-cont");
+const avatarInfoElement = document.querySelector("#avatar .info-element");
+let isOpenAvatarCont = false;
+function openAvaterCont() {
+    if (!isOpenAvatarCont) {
+        avatarCont.classList.add("account-cont-active");
+        avatarInfoElement.style.display = "none";
+    } else {
+        avatarCont.classList.remove("account-cont-active");
+        avatarInfoElement.style.display = "inline-block";
+
+        
+    }
+
+    isOpenAvatarCont = !isOpenAvatarCont;
+}
+

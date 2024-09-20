@@ -8,17 +8,42 @@
     <link rel="icon" type="image/x" href="img/siteicon-img.png">
 </head>
 <body>
+    <div class="button-alt" id="account-cont">
+        <div id="top-bar">
+            <div id="img">
+                <img src="img/maliko.png">
+            </div>
+            
+            <div id="right-info">
+                <span id="user-nick">Malikoreis</span>
+                <button class="button-class"><img src="img/icon/tv-icon-blue.svg">Go Channel</button>
+            </div>
+            <span id="account-span">ACCOUNT <img src="img/icon/rightarrrow-icon.svg"></span>
+            <span id="account-icon"><img src="img/icon/account-icon-blue.svg"></span>
+        </div>
+        <div class="default-hr"></div>
+        <div id="body-bar">
+            <button class="button-class"><img src="img/icon/account-icon.svg" class="icon"><span class="text pointer">My Account</span></button>
+            <button class="button-class"><img src="img/icon/logout-icon.svg" class="icon"><span class="text pointer">Log Out</span></button>
+            <div class="default-hr"></div>
+            <button class="button-class"><img src="img/icon/moon-icon-sun.svg" class="icon"><span class="text pointer" style="width: 100%;">Theme <img src="img/icon/rightarrrow-icon.svg"></span></button>
+            <button class="button-class"><img src="img/icon/language-icon-png.png" class="icon"><span class="text pointer" style="width: 100%;">Language <span class="right-edit"><span class="right-edit-text">English</span><img src="img/icon/rightarrrow-icon.svg"></span></span></button>
+            <button class="button-class"><img src="img/icon/location-icon.svg" class="icon"><span class="text pointer" style="width: 100%;">Location <img src="img/icon/rightarrrow-icon.svg"></span></button>
+            <div class="default-hr"></div>
+            <button class="button-class"><img src="img/icon/settings-icon.svg" class="icon"><span class="text pointer" style="width: 100%;">Settings</span></button>
+        </div>
+    </div>
     <div id="navbar">
         <div id="navbar-title">
             <button id="left-bar-button" class="button-class five-button info-element-button"><img src="img/icon/menu-icon.svg" alt="Bar"><span class="info-element">Menu</span></button>
-            <a href="index.html" class="button-class info-element-button" id="home-page-rooter"><img src="img/siteicon-img.png" alt=""><span class="info-element">Home Page</span><span id="siteTitle" class="pointer">Social</span><span id="country-lower">EN</span></a>
+            <a href="index.html" class="button-class info-element-button" id="home-page-rooter"><img src="img/siteicon-img.png"><span class="info-element">Home Page</span><span id="siteTitle" class="pointer">Social</span><span id="country-lower">EN</span></a>
         </div>
         <div id="search-bar">
             <div id="by-search">
                 <div id="input-cont">
                     <span id="focus-search"></span>
                     <input type="text" placeholder="Search" id="searchInput" oninput="toggleResetButton(this.value)" autocomplete="off">
-                    <button class="button-class five-button" id="resetButton" onclick="resetInput()" disabled><img src="img/icon/close-icon.svg" alt=""></button>
+                    <button class="button-class five-button" id="resetButton" onclick="resetInput()" disabled><img src="img/icon/close-icon.svg"></button>
                 </div>
                 <button class="button-class info-element-button button-class-bg" id="search-button"><span class="info-element">Search</span><img src="img/icon/search-icon.svg" alt="Search"></button>
             </div>
@@ -27,7 +52,10 @@
         <div id="tools">
             <button class="five-button button-class info-element-button" id="create-video"><span class="info-element">Create</span><img src="img/icon/add-icon.svg" alt="Add"></button>
             <button class="five-button button-class info-element-button" id="notification"><span class="info-element">Notification</span><img src="img/icon/notification-icon.svg" alt="Anc"><span id="intensity-icon">+0</span></button>
-            <button class="five-button button-class info-element-button" id="avatar" style="padding: 0;"><span class="info-element">Account</span><img src="img/trychatchnew_2.png" alt="Account"></button>
+            <button class="five-button button-class info-element-button" id="avatar" style="padding: 0;" onclick="openAvaterCont()">
+                <span class="info-element">Account</span>
+                <img src="img/trychatchnew_2.png" alt="Account">
+            </button>
         </div>
     </div>
 

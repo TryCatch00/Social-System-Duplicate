@@ -109,10 +109,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 #navbar #tools #avatar {
   background-color: transparent;
   border: none;
+  position: relative;
 }
 #navbar #tools #avatar img {
   width: 100%;
@@ -145,6 +147,122 @@
   border-radius: 10px;
   font-weight: 600;
   pointer-events: none;
+}
+
+#account-cont {
+  top: 55px;
+  right: -5px;
+  background-color: rgb(20, 20, 20);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1529411765);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+#account-cont #top-bar {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  padding: 10px;
+  gap: 10px;
+}
+#account-cont #top-bar #img {
+  width: 70px;
+}
+#account-cont #top-bar #img img {
+  width: 100%;
+  border-radius: 50%;
+}
+#account-cont #top-bar #right-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+#account-cont #top-bar #right-info #user-nick {
+  font-family: Hind-Light;
+  font-size: 20px;
+  max-width: 90%;
+  overflow: hidden;
+}
+#account-cont #top-bar #right-info .button-class {
+  font-size: 15px;
+  color: #23c8ff;
+}
+#account-cont #top-bar #account-span {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(90deg);
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#account-cont #top-bar #account-span img {
+  width: 15px;
+}
+#account-cont #top-bar #account-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  opacity: 0.2;
+  z-index: -1;
+}
+#account-cont #top-bar #account-icon img {
+  width: 100%;
+}
+#account-cont .default-hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#account-cont #body-bar {
+  padding: 10px;
+}
+#account-cont #body-bar .button-class {
+  width: 100%;
+  justify-content: space-between !important;
+  font-size: 18px;
+}
+#account-cont #body-bar .button-class img {
+  width: 30px;
+}
+#account-cont #body-bar .button-class .icon {
+  margin-right: 10px;
+}
+#account-cont #body-bar .button-class .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+}
+#account-cont #body-bar .button-class .text .right-edit {
+  display: flex;
+  align-items: center;
+}
+#account-cont #body-bar .button-class .text .right-edit .right-edit-text {
+  border: 1px solid #fff !important;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  max-width: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(255, 255, 255, 0.138) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.15) 0px 18px 36px -18px inset;
+}
+#account-cont #body-bar .default-hr {
+  margin: 10px 0 !important;
+}
+
+.account-cont-active {
+  top: 70px !important;
+  right: 10px !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 * {
@@ -199,6 +317,9 @@ a {
 }
 .button-class:active {
   background-color: rgba(255, 255, 255, 0.2352941176) !important;
+}
+.button-class img {
+  width: 20px;
 }
 
 .button-class-bg {
@@ -324,6 +445,11 @@ li {
   width: 20px !important;
 }
 
+.button-alt {
+  position: fixed;
+  width: 300px;
+}
+
 /* HIND */
 @font-face {
   font-family: Hind-Bold;
@@ -431,10 +557,11 @@ h1 {
 
 #left-bar {
   left: 0;
-  height: 88.1vh;
+  height: 87.5vh;
   max-width: 260px;
   overflow: auto;
   padding-bottom: 10px;
+  transition: 1s width;
 }
 #left-bar .bar-container {
   width: 85% !important;
@@ -464,8 +591,8 @@ h1 {
   display: flex;
   justify-content: space-between !important;
   font-family: Muli-Light;
-  width: 100%;
   max-height: 40px;
+  width: 100%;
 }
 #left-bar .just-button .icon {
   width: 30px;
@@ -541,7 +668,7 @@ h1 {
 }
 
 .mini-left-bar {
-  width: 110px;
+  max-width: 110px !important;
 }
 .mini-left-bar .just-button {
   flex-direction: column;
@@ -558,6 +685,7 @@ h1 {
   text-align: center !important;
   padding-left: 0px !important;
 }
+
 #left-bar:hover::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1529411765);
 }

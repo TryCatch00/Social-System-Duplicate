@@ -27,7 +27,6 @@ const leftMiniBarinnerHTML = `
 
 let leftBarinnerHTML = leftBar.innerHTML;
 
-// Başlangıçta sol çubuğun durumu
 if (isClickLeftBarButton) {
     leftBar.classList.add("mini-left-bar");
     leftBar.innerHTML = leftMiniBarinnerHTML;
@@ -36,13 +35,18 @@ if (isClickLeftBarButton) {
 leftBarButton.addEventListener("click", () => {
     if (!isClickLeftBarButton) {
         leftBar.classList.add("mini-left-bar");
-        leftBar.innerHTML = leftMiniBarinnerHTML;
-        localStorage.setItem("leftBarState", "mini"); // Durumu kaydet
+        setTimeout(() => {
+            leftBar.innerHTML = leftMiniBarinnerHTML;
+            localStorage.setItem("leftBarState", "mini");
+        }, 100);
     } else {
         leftBar.classList.remove("mini-left-bar");
-        leftBar.innerHTML = leftBarinnerHTML;
-        localStorage.setItem("leftBarState", "full"); // Durumu kaydet
+        setTimeout(() => {
+            leftBar.innerHTML = leftBarinnerHTML;
+            localStorage.setItem("leftBarState", "full");
+        }, 100);
     }
+    buttonActive();
 
     isClickLeftBarButton = !isClickLeftBarButton;
 });

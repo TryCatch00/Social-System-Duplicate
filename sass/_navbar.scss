@@ -133,12 +133,13 @@
         display: flex;
         align-items: center;
         gap: 10px;
-
-        
+        position: relative;
+      
 
         #avatar {
             background-color: transparent;
             border: none;
+            position: relative;
 
             img {
                 width: 100%;
@@ -146,7 +147,7 @@
 
             &:hover {
                 outline: none;
-            }
+            }                 
         }
 
         #sign-in {
@@ -178,6 +179,142 @@
         font-weight: 600;
         pointer-events: none;
     }
+}
+
+#account-cont {
+    top: 55px;
+    right: -5px;
+    background-color: $dark-bg;
+    border-radius: 10px;
+    border: 1px solid $hover-bg;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+
+    #top-bar {
+        display: flex;
+        justify-content: left;
+        position: relative;
+        padding: 10px;
+        gap: 10px;
+
+        #img {
+            width: 70px;
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        #right-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+
+            #user-nick {
+                font-family: Hind-Light;
+                font-size: 20px;
+                max-width: 90%;
+                overflow: hidden;
+            }
+
+            .button-class {
+                font-size: 15px;
+                color: $focus-color;
+            }
+        }
+
+        #account-span {
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            transform: rotate(90deg);
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 15px;
+            }
+        }
+
+        #account-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 90px;
+            height: 90px;
+            opacity: .2;
+            z-index: -1;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .default-hr {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #body-bar {
+        padding: 10px;
+
+        .button-class {
+            width: 100%;
+            justify-content: space-between !important;
+            font-size: 18px;
+
+            img {
+                width: 30px;
+            }
+
+            .icon {
+                margin-right: 10px;
+            }
+            
+            .text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between !important;
+
+                .right-edit {
+                    display: flex;
+                    align-items: center;
+                    
+
+                    .right-edit-text {
+                        border: 1px solid #fff !important;
+                        padding: 10px;
+                        cursor: pointer;
+                        border-radius: 50px;
+                        max-width: 50px;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: rgba(255, 255, 255, 0.138) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.15) 0px 18px 36px -18px inset;
+                    }
+                }
+            }
+        }
+
+        .default-hr {
+            margin: 10px 0 !important;
+        }
+    }
+} 
+
+.account-cont-active {
+    top: 70px !important;
+    right: 10px !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
 }
 
 // MOBILE

@@ -16,10 +16,11 @@
 
 #left-bar {
     left: 0;
-    height: calc(100vh - 11.9vh);
+    height: calc(100vh - 12.5vh);
     max-width: 260px;
     overflow: auto;
     padding-bottom: 10px;
+    transition: 1s width;
 
     .bar-container {
         width: 85% !important;
@@ -59,6 +60,8 @@
         display: flex;
         justify-content: space-between !important;
         font-family: Muli-Light;
+        max-height: 40px;
+        width: 100%;
 
         .icon {
             width: 30px;
@@ -70,9 +73,6 @@
             text-align: left;
             padding-left: 15px;
         }
-
-        width: 100%;
-        max-height: 40px;
     }
 
     .custom-hr {
@@ -153,7 +153,7 @@
 
 // MINI
 .mini-left-bar {
-    width: 110px;
+    max-width: 110px !important;
 
     .just-button {
         flex-direction: column;
@@ -171,9 +171,6 @@
             text-align: center !important;
             padding-left: 0px !important;
         }
-    }
-
-    .default-hr {
     }
 }
 
