@@ -103,14 +103,18 @@ const avatarCont = document.getElementById("account-cont");
 const avatarInfoElement = document.querySelector("#avatar .info-element");
 let isOpenAvatarCont = false;
 function openAvaterCont() {
+    const bgBlur = document.querySelector('#bg-blur');
+
     if (!isOpenAvatarCont) {
         avatarCont.classList.add("account-cont-active");
         avatarInfoElement.style.display = "none";
+        isOpenBgBlur = true;
+        bgBlur.classList.add("on-bg-blur");
+        onBgBlur();
     } else {
         avatarCont.classList.remove("account-cont-active");
         avatarInfoElement.style.display = "inline-block";
-
-        
+        bgBlur.classList.remove("on-bg-blur");
     }
 
     isOpenAvatarCont = !isOpenAvatarCont;
