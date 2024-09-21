@@ -7,8 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 90px;
+  height: 10%;
   padding: 0 20px;
+  background-color: rgb(20, 20, 20) !important;
 }
 #navbar #navbar-title {
   display: flex;
@@ -152,7 +153,7 @@
 #account-cont {
   top: 55px;
   right: -5px;
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(10, 10, 10);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1529411765);
   z-index: 5;
@@ -279,10 +280,14 @@ html {
   background-color: rgb(20, 20, 20);
   color: rgb(226, 226, 226);
   font-size: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   box-sizing: border-box;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -474,7 +479,7 @@ li {
 .tooltip {
   display: inline-block;
   position: absolute;
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(10, 10, 10);
   border: 1px solid #fff;
   border-radius: 50px 50px 0 50px !important;
   font-size: 0.5rem;
@@ -484,6 +489,12 @@ li {
   white-space: nowrap;
   z-index: 10;
   text-transform: lowercase;
+}
+
+#nav-alt-cont {
+  display: flex;
+  width: 100%;
+  height: 90%;
 }
 
 /* HIND */
@@ -564,6 +575,9 @@ h1 {
   .container {
     width: 84%;
   }
+  #content {
+    border-radius: 20px 0 0 0 !important;
+  }
 }
 @media (min-width: 1199.98px) {
   html {
@@ -593,11 +607,11 @@ h1 {
 
 #left-bar {
   left: 0;
-  height: 87.5vh;
+  height: 100%;
   max-width: 260px;
   overflow: auto;
-  padding-bottom: 10px;
   transition: 1s width;
+  background-color: rgb(20, 20, 20);
 }
 #left-bar .bar-container {
   width: 85% !important;
@@ -734,6 +748,13 @@ h1 {
     scrollbar-width: thin;
     scrollbar-color: #1e202a;
   }
+}
+#content {
+  background-color: rgb(10, 10, 10);
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
 }
 
 /*# sourceMappingURL=main.css.map */

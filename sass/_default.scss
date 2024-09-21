@@ -11,13 +11,18 @@
 
 html {
     font-family: Hind-Medium, sans-serif;
-    background-color: $dark-bg;
+    background-color: $dark2-bg;
     color: $dark-color;
     font-size: 20px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     box-sizing: border-box;
+    
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -230,4 +235,10 @@ li {
     white-space: nowrap;
     z-index: 10;
     text-transform: lowercase;
+}
+
+#nav-alt-cont {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 10%);
 }

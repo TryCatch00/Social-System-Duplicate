@@ -18,6 +18,7 @@
     #home-page-rooter {
         font-size: .8rem !important;
     }
+    
 }
 
 @media (min-width: 991.98px) { 
@@ -26,6 +27,9 @@
     }
     .container {
         width: 84%;
+    }
+    #content {
+        border-radius: 20px 0 0 0 !important;
     }
 }
 

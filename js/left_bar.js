@@ -50,3 +50,15 @@ leftBarButton.addEventListener("click", () => {
 
     isClickLeftBarButton = !isClickLeftBarButton;
 });
+
+const mediaQueryLeftBar = window.matchMedia('(max-width: 991px)');
+function handleMediaChangeLeftBar(e) {
+    if (e.matches) {
+        leftBar.style.display = "none";
+    } else {
+        leftBar.style.display = "block";
+    }
+}
+
+handleMediaChangeLeftBar(mediaQueryLeftBar);
+mediaQueryLeftBar.addListener(handleMediaChangeLeftBar);

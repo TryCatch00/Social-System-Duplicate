@@ -3,7 +3,7 @@ const navbar = document.getElementById("navbar");
 let homePageRooterText = document.getElementById("siteTitle");
 let siteTitle = homePageRooterText.textContent;
 
-let isLogin = true;
+let isLogin = false;
 if (!isLogin) {
     let innerHTML = `
         <div id="navbar-title">
@@ -59,11 +59,12 @@ function resetInput() {
     }
 }
 
-const mediaQuery = window.matchMedia('(max-width: 991px)');
+const mediaQueryNavbar = window.matchMedia('(max-width: 991px)');
 
-function handleMediaChange(e) {
+function handleMediaChangeNavbar(e) {
     if (e.matches) {
         let mobileInnerHTML = `
+            <button id="left-bar-button" class="button-class five-button info-element-button" style="display: none;"><img src="img/icon/menu-icon.svg" alt="Bar"><span class="info-element">Menu</span></button>
             <div id="navbar-title">
                 <a href="index.html" class="button-class" id="home-page-rooter" style="padding: 10px 10px;"><img src="img/siteicon-img.png" alt="">${siteTitle} <span id="country-lower">EN</span></a>
             </div>
@@ -80,8 +81,8 @@ function handleMediaChange(e) {
     }
 }
 
-handleMediaChange(mediaQuery);
-mediaQuery.addListener(handleMediaChange);
+handleMediaChangeNavbar(mediaQueryNavbar);
+mediaQueryNavbar.addListener(handleMediaChangeNavbar);
 
 
 function listenerFocus() {
