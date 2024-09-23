@@ -1,6 +1,6 @@
 let videos = [
     {
-        videoTitle: "F1 | Official Teaser",
+        videoTitle: `F1 | Official Teaser`,
         videoChannel: "Pounter",
         videoChannelLogoSRC: "img/channel_logo/pounter.png",
         videoWiew: 5700000,
@@ -10,13 +10,13 @@ let videos = [
         videoDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non, architecto explicabo laudantium, voluptatibus ipsa reprehenderit aut tempora dolorum autem eaque blanditiis suscipit magni quidem a vero provident sapiente veritatis.`
     },
     {
-        videoTitle: "Mal1kore1ss",
+        videoTitle: `Zyzz Motivasyon Konuşması Altyazı Zyzz Türkiye`,
         videoChannel: "Mal1kore1ss",
         videoChannelLogoSRC: "img/channel_logo/maliko.png",
         videoWiew: 5700000,
         videoAge: "22.09.2024",
-        videoTumbSRC: "img/tumbnail/f1-tumbnail.jpg",
-        videoSRC: "videos/f1-trailer2.mp4",
+        videoTumbSRC: "img/tumbnail/zyzzturkeytumb.jpg",
+        videoSRC: "videos/ZyzzMotivationBrrooo.mp4",
         videoDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non, architecto explicabo laudantium, voluptatibus ipsa reprehenderit aut tempora dolorum autem eaque blanditiis suscipit magni quidem a vero provident sapiente veritatis.`
     }
 ];
@@ -72,6 +72,7 @@ function getVideo() {
         videosPrewiew.insertAdjacentHTML("afterbegin", videoHTML);
 
         const videoItem = videosPrewiew.querySelector(`.video-item[id="${cont.videoSRC}"]`);
+        
         videoItem.addEventListener("mouseover", () => {
             prewiewVideoGet(cont.videoSRC);  
         });
@@ -79,7 +80,7 @@ function getVideo() {
         videoItem.addEventListener("mouseout", () => {
             let videoM = videoItem.querySelector(".prewiew-video");
             videoM.pause();
-            videoM.currentTime = 0; // Videonun başa dönmesini sağlamak için
+            videoM.currentTime = 0;
         });
     });
 }
@@ -94,18 +95,12 @@ function formatNumber(num) {
     }
 }
 
-function formatDuration(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`; // "2:00" gibi format
-}
-
 function getElapsedTime(videoAge) {
-    const videoDate = new Date(videoAge.split('.').reverse().join('-')); // "DD.MM.YYYY" formatını "YYYY-MM-DD" formatına çevir
+    const videoDate = new Date(videoAge.split('.').reverse().join('-'));
     const now = new Date();
     
-    const diffTime = videoDate - now; // Geçen süreyi milisaniye cinsinden hesapla
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); // Gün cinsine çevir
+    const diffTime = videoDate - now;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
     if (diffDays > 0) {
         return `${diffDays} Days later`;
@@ -121,13 +116,18 @@ let video1 = "";
 function prewiewVideoGet(videoSRC) {
     console.log(videoSRC);
     let videoM = document.getElementById(videoSRC).querySelector(".prewiew-video");
+    
     if (video1 !== videoSRC) {
         videoM.src = videoSRC;
-        videoM.play().catch(error => {
-            console.error('Video play error:', error);
-        });
+        videoM.muted = true; 
+        videoM.load(); 
+        
+        videoM.play()
+            .then(() => console.log('Video is playing'))
+            .catch(error => {
+                console.error('Video play error:', error);
+            });
+
         video1 = videoSRC;
-    } else {
-        video1 = "";
     }
 }
