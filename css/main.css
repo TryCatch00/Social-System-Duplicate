@@ -431,6 +431,7 @@ li {
 }
 
 .info-element {
+  z-index: 2;
   position: absolute;
   bottom: -30px;
   left: 50%;
@@ -755,6 +756,183 @@ h1 {
   height: 100%;
   display: block;
   border-radius: 20px 20px 0 0;
+}
+
+.videos-prewiew {
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.videos-prewiew .video-item {
+  width: 450px;
+  height: min-content;
+  position: relative;
+}
+.videos-prewiew .video-item:hover .video-description {
+  opacity: 1;
+  max-height: 50px;
+}
+.videos-prewiew .video-item:hover .prewiew-video {
+  opacity: 1 !important;
+}
+.videos-prewiew .video-item .video-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+.videos-prewiew .video-item .video-thumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+.videos-prewiew .video-item .video-thumbnail .prewiew-video {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  opacity: 0;
+  transition: 0.6s;
+}
+.videos-prewiew .video-item .video-thumbnail img {
+  width: 100%;
+  border-radius: 20px;
+}
+.videos-prewiew .video-item .video-thumbnail .video-item-tumbnail-time {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 0.55rem;
+  background-color: rgb(20, 20, 20);
+  font-family: sans-serif;
+  padding: 3px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.videos-prewiew .video-item .video-description-cont {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  left: 0;
+  z-index: 3;
+}
+.videos-prewiew .video-item .video-description {
+  background-color: rgb(10, 10, 10);
+  max-height: 0px;
+  overflow: hidden;
+  font-size: 0.65rem;
+  text-align: left;
+  position: relative;
+  z-index: 3;
+  transition: 0.6s;
+  opacity: 0;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: help;
+}
+.videos-prewiew .video-item .video-description:hover {
+  max-height: 140px !important;
+}
+.videos-prewiew .video-item .video-description:hover .more-button {
+  opacity: 1;
+}
+.videos-prewiew .video-item .video-description .more-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 3;
+  padding: 6px 0 !important;
+  opacity: 0;
+  background-color: rgb(10, 10, 10);
+  border-radius: 0;
+}
+.videos-prewiew .video-item .video-description .more-button:hover {
+  background-color: rgba(255, 255, 255, 0.1529411765) !important;
+  color: rgba(255, 255, 255, 0);
+}
+.videos-prewiew .video-item .video-prewiew-body {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-channel-logo {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 60px;
+  z-index: 2;
+  transition: 0.3s;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-channel-logo:hover {
+  opacity: 0.5;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-channel-logo .video-channel-link {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-channel-logo .video-channel-link .video-channel-logo-img {
+  height: 100%;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-info {
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  flex-direction: column;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-info .video-prewiew-title {
+  font-size: 0.8rem;
+  font-family: Hind-Bold;
+  letter-spacing: 1px;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  margin-left: 10px;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-info .title-alt {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-info .title-alt .video-prewiew-channel-name {
+  z-index: 2;
+  cursor: pointer;
+  font-size: 0.6rem;
+  font-family: Hind-Medium;
+  margin-left: 10px;
+  max-width: 90px;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-info .title-alt .video-prewiew-channel-name .info-element {
+  border-radius: 5px;
+  gap: 5px;
+  background-color: rgb(20, 20, 20) !important;
+  z-index: 7;
+  bottom: 0;
+}
+.videos-prewiew .video-item .video-prewiew-body .video-info .title-alt .video-prewiew-more {
+  font-size: 0.5rem;
+  font-family: Hind-Light;
+  display: flex;
+  gap: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
