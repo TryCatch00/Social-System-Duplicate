@@ -1,141 +1,122 @@
-let videos = [
-    {
-        videoTitle: "F1 | Official Teaser",
-        videoChannel: "Pounter",
-        videoChannelLogoSRC: "img/channel_logo/pounter.png",
-        videoWiew: 5700000,
-        videoAge: "22.09.2024",
-        videoTumbSRC: "img/tumbnail/f1-tumbnail.jpg",
-        videoSRC: "videos/f1-trailer.mp4",
-        videoDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non, architecto explicabo laudantium, voluptatibus ipsa reprehenderit aut tempora dolorum autem eaque blanditiis suscipit magni quidem a vero provident sapiente veritatis.`
-    },
-    {
-        videoTitle: "Mal1kore1ss",
-        videoChannel: "Mal1kore1ss",
-        videoChannelLogoSRC: "img/channel_logo/maliko.png",
-        videoWiew: 5700000,
-        videoAge: "22.09.2024",
-        videoTumbSRC: "img/tumbnail/f1-tumbnail.jpg",
-        videoSRC: "videos/f1-trailer.mp4",
-        videoDescription: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non, architecto explicabo laudantium, voluptatibus ipsa reprehenderit aut tempora dolorum autem eaque blanditiis suscipit magni quidem a vero provident sapiente veritatis.`
+const navbar = document.getElementById("navbar");
+
+let homePageRooterText = document.getElementById("siteTitle");
+let siteTitle = homePageRooterText.textContent;
+
+let isLogin = true;
+if (!isLogin) {
+    let innerHTML = `
+        <div id="navbar-title">
+            <button id="left-bar-button" class="button-class five-button info-element-button"><img src="img/icon/menu-icon.svg" alt="Bar"><span class="info-element">Menu</span></button>
+            <a href="index.html" class="button-class info-element-button" id="home-page-rooter"><img src="img/siteicon-img.png" alt=""><span class="info-element">Home Page</span>${siteTitle} <span id="country-lower">EN</span></a>
+        </div>
+        <div id="search-bar">
+            <div id="by-search">
+                <div id="input-cont">
+                    <span id="focus-search"></span>
+                    <input type="text" placeholder="Search" id="searchInput" oninput="toggleResetButton(this.value)" autocomplete="off">
+                    <button class="button-class five-button" id="resetButton" onclick="resetInput()" disabled><img src="img/icon/close-icon.svg" alt=""></button>
+                </div>
+                <button class="button-class info-element-button button-class-bg" id="search-button"><span class="info-element">Search</span><img src="img/icon/search-icon.svg" alt="Search"></button>
+            </div>
+            <button id="mic-button" class="button-class five-button info-element-button button-class-bg"><span class="info-element">Make a Voice Call</span><img src="img/icon/mic-icon.svg" alt="Mic"></button>
+        </div>
+        <div id="tools">
+            <button class="five-button button-class info-element-button" id="create-video"><span class="info-element">More</span><img src="img/icon/more-icon.svg" alt="Add"></button>
+            <button class="button-class info-element-button" id="sign-in"><span class="info-element">Account</span><img src="img/icon/account-icon-blue.svg" alt="Add">Sign In</button>
+        </div>
+    `;
+
+    navbar.innerHTML = innerHTML;
+    listenerFocus();
+
+    
+}
+
+const desktopInnerHTML = navbar.innerHTML;
+
+function toggleResetButton(value) {
+    const resetButton = document.getElementById('resetButton');
+    if (value !== "") {
+        resetButton.style.opacity = "1"; 
+        resetButton.style.pointerEvents = "auto"; 
+        resetButton.disabled = false; 
+    } else {
+        resetButton.style.opacity = "0"; 
+        resetButton.style.pointerEvents = "none"; 
+        resetButton.disabled = true; 
     }
-];
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-    getVideo();
-});
+function resetInput() {
+    console.log("Developer Console: Active system please close.");
 
-function getVideo() {
-    const videosPrewiew = document.querySelector(".videos-prewiew");
-    videos.forEach(cont => {
-        let videoHTML = `
-            <div class="video-item pointer" id="${cont.videoSRC}">
-                <a href="#" class="video-link"></a>
-                <div class="video-thumbnail pointer">
-                    <video src="" class="prewiew-video"></video>
-                    <img src="${cont.videoTumbSRC}">
-                    <span class="video-item-tumbnail-time" id="duration-${cont.videoTitle.replace(/\s+/g, '-')}" data-src="${cont.videoSRC}">0:00</span>
-                </div>
-                
-                <div class="video-prewiew-body">
-                    <div class="video-channel-logo">
-                        <a href="#" class="video-channel-link pointer">
-                            <img src="${cont.videoChannelLogoSRC}" class="video-channel-logo-img">
-                        </a>
-                    </div>
-                    <div class="video-info">
-                        <a href="#" class="video-prewiew-title pointer">${cont.videoTitle}</a>
-                        <div class="title-alt">
-                            <a href="#" class="video-prewiew-channel-name pointer info-element-button">
-                                ${cont.videoChannel}
-                                <span class="info-element">
-                                    <img src="img/icon/account-icon.svg" alt="">
-                                    <span class="full-channel-name">${cont.videoChannel}</span>
-                                </span>
-                            </a>
-                            <span class="video-prewiew-more">
-                                <span>${formatNumber(cont.videoWiew)} Wiew</span> • 
-                                <span>${getElapsedTime(cont.videoAge)}</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-description-cont">
-                    <div class="video-description">
-                        ${cont.videoDescription}
-                        <button class="button-class more-button">More</button>
-                    </div>
-                </div>
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput.value !== "") {
+        searchInput.value = "";
+        toggleResetButton("");
+        searchInput.focus();
+    }
+}
+
+const mediaQueryNavbar = window.matchMedia('(max-width: 991px)');
+
+function handleMediaChangeNavbar(e) {
+    if (e.matches) {
+        let mobileInnerHTML = `
+            <button id="left-bar-button" class="button-class five-button info-element-button" style="display: none;"><img src="img/icon/menu-icon.svg" alt="Bar"><span class="info-element">Menu</span></button>
+            <div id="navbar-title">
+                <a href="index.html" class="button-class" id="home-page-rooter" style="padding: 10px 10px;"><img src="img/siteicon-img.png" alt="">${siteTitle} <span id="country-lower">EN</span></a>
+            </div>
+            <div id="search-bar">
+                <button id="mobile-mic-button" class="button-class five-button"><img src="img/icon/mic-icon.svg" alt="Mic"></button>
+                <button class="five-button button-class" id="notification"><img src="img/icon/notification-icon.svg" alt="Anc"><span id="intensity-icon">+0</span></button>
+                <button class="button-class five-button" id="mobile-search-button"><img src="img/icon/search-icon.svg" alt="Search"></button>
             </div>
         `;
+        navbar.innerHTML = mobileInnerHTML;
+    } else {
+        navbar.innerHTML = desktopInnerHTML;
+        listenerFocus();
+    }
+}
 
-        videosPrewiew.insertAdjacentHTML("afterbegin", videoHTML);
+handleMediaChangeNavbar(mediaQueryNavbar);
+mediaQueryNavbar.addListener(handleMediaChangeNavbar);
 
-        const videoItem = videosPrewiew.querySelector(`.video-item[id="${cont.videoSRC}"]`);
-        videoItem.addEventListener("click", () => {
-            prewiewVideoGet(cont.videoSRC);  
-        });
 
-        // Mouseover ve mouseout olayları
-        videoItem.addEventListener("mouseover", () => {
-            prewiewVideoGet(cont.videoSRC);
-        });
+function listenerFocus() {
+    const searchInput = document.getElementById("searchInput");
+    const focusSpanSearch = document.getElementById("focus-search");
 
-        videoItem.addEventListener("mouseout", () => {
-            let videoM = videoItem.querySelector(".prewiew-video");
-            videoM.pause();
-            videoM.currentTime = 0; // Videonun başa dönmesini sağlamak için
-        });
+    searchInput.addEventListener("focus", () => {
+        focusSpanSearch.innerHTML = `<img src="img/icon/search-icon-blue.svg" style="padding: 2px;" alt="Search Icon">`;
+        searchInput.placeholder = "...";
+    });
+
+    searchInput.addEventListener("blur", () => {
+        focusSpanSearch.innerHTML = ``;
+        searchInput.placeholder = "Search";
     });
 }
 
-function formatNumber(num) {
-    if (num >= 1000000) {
-        return (num / 1000000).toFixed(1) + ' Mn';
-    } else if (num >= 1000) {
-        return (num / 1000).toFixed(1) + ' Bn';
+const avatarCont = document.getElementById("account-cont");
+const avatarInfoElement = document.querySelector("#avatar .info-element");
+let isOpenAvatarCont = false;
+function openAvaterCont() {
+    const bgBlur = document.querySelector('#bg-blur');
+
+    if (!isOpenAvatarCont) {
+        avatarCont.classList.add("account-cont-active");
+        avatarInfoElement.style.display = "none";
+        isOpenBgBlur = true;
+        bgBlur.classList.add("on-bg-blur");
+        onBgBlur();
     } else {
-        return num.toString();
+        avatarCont.classList.remove("account-cont-active");
+        avatarInfoElement.style.display = "inline-block";
+        bgBlur.classList.remove("on-bg-blur");
     }
+
+    isOpenAvatarCont = !isOpenAvatarCont;
 }
-
-function formatDuration(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`; // "2:00" gibi format
-}
-
-function getElapsedTime(videoAge) {
-    const videoDate = new Date(videoAge.split('.').reverse().join('-')); // "DD.MM.YYYY" formatını "YYYY-MM-DD" formatına çevir
-    const now = new Date();
-    
-    const diffTime = videoDate - now; // Geçen süreyi milisaniye cinsinden hesapla
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); // Gün cinsine çevir
-
-    if (diffDays > 0) {
-        return `${diffDays} Days later`;
-    } else if (diffDays < 0) {
-        return `${Math.abs(diffDays)} Days ago`;
-    } else {
-        return "Today";
-    }
-}
-
-let video1 = "";
-
-function prewiewVideoGet(videoSRC) {
-    console.log(videoSRC);
-    let videoM = document.getElementById(videoSRC).querySelector(".prewiew-video");
-    
-    if (video1 !== videoSRC) {
-        videoM.src = videoSRC;
-        videoM.load(); // Kaynağı yükle
-        videoM.play().catch(error => {
-            console.error('Video play error:', error);
-        });
-        video1 = videoSRC;
-    } else {
-        video1 = "";
-    }
-}
-
