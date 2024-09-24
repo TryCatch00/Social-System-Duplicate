@@ -25,11 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
     getVideo();
 });
 
+// PREVİEW
+
 function getVideo() {
     const videosPrewiew = document.querySelector(".videos-prewiew");
     videos.forEach(cont => {
         let videoHTML = `
-            <div class="video-item pointer" id="${cont.videoSRC}">
+        <div class="video-item-cont">
+        <div class="video-item pointer" id="${cont.videoSRC}">
                 <a href="#" class="video-link"></a>
                 <div class="video-thumbnail pointer">
                     <video src="" class="prewiew-video"></video>
@@ -44,10 +47,10 @@ function getVideo() {
                         </a>
                     </div>
                     <div class="video-info">
-                        <a href="#" class="video-prewiew-title pointer">${cont.videoTitle}</a>
+                        <a href="#" class="video-prewiew-title pointer" title="${cont.videoTitle}">${cont.videoTitle}</a>
                         <div class="title-alt">
                             <a href="#" class="video-prewiew-channel-name pointer info-element-button">
-                                ${cont.videoChannel}
+                                <span class="short-name">${cont.videoChannel}</span>
                                 <span class="info-element">
                                     <img src="img/icon/account-icon.svg" alt="">
                                     <span class="full-channel-name">${cont.videoChannel}</span>
@@ -60,13 +63,15 @@ function getVideo() {
                         </div>
                     </div>
                 </div>
-                <div class="video-description-cont">
-                    <div class="video-description">
-                        ${cont.videoDescription}
-                        <button class="button-class more-button">More</button>
-                    </div>
+            </div>
+            <div class="video-description-cont">
+                <div class="video-description">
+                    ${cont.videoDescription}
+                    <button class="button-class more-button">More</button>
                 </div>
             </div>
+        </div>
+            
         `;
 
         videosPrewiew.insertAdjacentHTML("afterbegin", videoHTML);
