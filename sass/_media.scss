@@ -9,6 +9,10 @@
 }
 
 @media (min-width: 767.98px) { 
+    .video-item {
+        width: 425px !important;
+    }
+
     html {
         font-size: 23px;
     }
@@ -34,6 +38,10 @@
 }
 
 @media (min-width: 1199.98px) { 
+    .video-item {
+        width: 450px !important;
+    }
+
     html {
         font-size: 25px;
     }
