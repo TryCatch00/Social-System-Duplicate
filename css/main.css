@@ -811,7 +811,7 @@ h1 {
   max-height: 50px;
 }
 .videos-prewiew .video-item-cont .video-item {
-  width: 390px;
+  width: 370px;
   height: min-content;
   position: relative;
   overflow: hidden;
