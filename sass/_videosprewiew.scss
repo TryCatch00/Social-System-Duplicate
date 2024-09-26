@@ -23,7 +23,7 @@
     }
 
     .video-item-cont {
-        width: min-content;
+        width: 100%;
         height: min-content;
         border-radius: 20px;
         transition: .6s;
@@ -33,12 +33,12 @@
 
             .video-description {
                 opacity: 1;
-                max-height: 50px;
+                max-height: 45px;
             }
         }
 
         .video-item {
-            width: 370px;
+            width: 100%;
             height: min-content;
             position: relative;
             overflow: hidden;
@@ -58,6 +58,8 @@
 
                 .mute-button {
                     opacity: .8 !important;
+                    border: 1px solid #fff;
+                    padding: 6px 18px;
                 }
             }
     
@@ -76,10 +78,12 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                max-height: 250px;
+                height: 200px;
+                overflow: hidden;
+                width: 100%;
                 overflow: hidden;
                 position: relative;
-                border-radius: 20px;
+                border-radius: 20px 20px 0 0;
 
                 .video-range {
                     position: absolute;
@@ -87,7 +91,7 @@
                     transform: translateX(-50%);
                     z-index: 10;
                     bottom: 0;
-                    width: 90%;
+                    width: 98%;
                     opacity: 0;
                 }
 
@@ -111,13 +115,14 @@
                 .video-item-tumbnail-time {
                     position: absolute;
                     right: 5px;
-                    bottom: 5px;
+                    bottom: 15px;
                     font-size: .55rem;
                     background-color: $dark2-bg;
                     font-family: sans-serif;
                     padding: 3px;
                     border-radius: 5px;
                     pointer-events: none;
+                    z-index: 8;
                 }
 
                 .mute-button {
@@ -127,10 +132,26 @@
                     right: 10px;
                     z-index: 7;
                     font-size: .5rem;
+                    width: 25px;
+                    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
 
                     img {
-                        width: 100%;
+                        width: 90%;
                     }
+                }
+
+                .current-time {
+                    display: inline-block;
+                    z-index: 10;
+                    font-size: .6rem;
+                    pointer-events: none;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
                 }
             }
     
@@ -143,6 +164,7 @@
             }
     
             .video-prewiew-body {
+                overflow: hidden;
                 margin-top: 10px;
                 display: grid;
                 grid-template-columns: 1fr 6fr;
@@ -186,7 +208,7 @@
                         overflow: hidden;   
                         text-align: left;
                         margin-left: 10px;
-                        width: 320px;
+                        width: 300px;
                         white-space: nowrap;      
                         text-overflow: ellipsis;
                     }
@@ -220,7 +242,7 @@
                                 border-radius: 5px;
                                 gap: 5px;
                                 background-color: $dark2-bg !important;
-                                z-index: 7;
+                                z-index: 4;
                                 bottom: 0;
                             }
                         }
@@ -256,3 +278,4 @@
         }
     }
 }
+

@@ -52,14 +52,15 @@ function getVideo() {
     videos.forEach(cont => {
         let videoHTML = `    
         <div class="video-item-cont">
-        <div class="video-item pointer" id="${cont.videoSRC}">
+            <div class="video-item pointer" id="${cont.videoSRC}">
                 <a href="#" class="video-link"></a>
                 <div class="video-thumbnail pointer">
                     <input type="range" class="video-range" min="0" max="100" value="0">
-                    <button class="video-button mute-button button-class">Mute</button>
-                    <video src="" class="prewiew-video"></video>
+                    <button class="video-button mute-button button-class five-button"><img src="img/icon/mute-icon.svg"></button>
+                    <video src="${cont.videoSRC}" class="prewiew-video" preload="metadata"></video>
                     <img src="${cont.videoTumbSRC}">
                     <span class="video-item-tumbnail-time" id="duration-${cont.videoTitle.replace(/\s+/g, '-')}" data-src="${cont.videoSRC}">0:00</span>
+                    <span class="current-time" id="current-${cont.videoTitle.replace(/\s+/g, '-')}" style="display: none;">0:00</span>
                 </div>
                 
                 <div class="video-prewiew-body">
@@ -91,39 +92,53 @@ function getVideo() {
                     ${cont.videoDescription}
                 </div>
             </div>
+        </div>
         `;
         videosPrewiew.insertAdjacentHTML("afterbegin", videoHTML);
 
         const videoItem = videosPrewiew.querySelector(`.video-item[id="${cont.videoSRC}"]`);
-        let videoM = document.getElementById(cont.videoSRC).querySelector(".prewiew-video");
-        let rangeInput = videosPrewiew.querySelector(`.video-range`);
-        let muteButton = videosPrewiew.querySelector(`.mute-button`);
+        let videoM = videoItem.querySelector(".prewiew-video");
+        let rangeInput = videoItem.querySelector(`.video-range`);
+        let muteButton = videoItem.querySelector(`.mute-button`);
+        let currentTimeSpan = videoItem.querySelector(`.current-time`);
+
+        // Video süresi yüklendiğinde süreyi göster
+        videoM.addEventListener('loadedmetadata', () => {
+            const durationSpan = videosPrewiew.querySelector(`#duration-${cont.videoTitle.replace(/\s+/g, '-')}`);
+            durationSpan.innerText = formatTime(videoM.duration);
+        });
 
         videoItem.addEventListener("mouseenter", () => {
             prewiewVideoGet(cont.videoSRC);
+            currentTimeSpan.style.display = 'block'; // Hover olduğunda göster
         });
 
         videoItem.addEventListener("mouseleave", () => {
             videoM.pause();
+            currentTimeSpan.style.display = 'none'; // Hoverdan çıkınca gizle
         });
 
         rangeInput.addEventListener("input", () => {
             videoM.currentTime = (videoM.duration * rangeInput.value) / 100;
         });
 
-        videoM.addEventListener('loadedmetadata', () => {
-            rangeInput.max = 100; // Set max to 100 when video metadata is loaded
-        });
-
         videoM.addEventListener('timeupdate', () => {
             rangeInput.value = (videoM.currentTime / videoM.duration) * 100;
+            const currentTimeFormatted = formatTime(videoM.currentTime);
+            currentTimeSpan.innerText = currentTimeFormatted; // Güncel süreyi göster
         });
 
         muteButton.addEventListener('click', () => {
             videoM.muted = !videoM.muted;
-            muteButton.innerText = videoM.muted ? 'Mute' : 'Mute';
+            muteButton.innerHTML = videoM.muted ? `<img src="img/icon/mute-icon.svg">` : `<img src="img/icon/unmute-icon.svg">`; // Düğme metnini güncelle
         });
     });
+}
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`; // MM:SS formatında göster
 }
 
 function formatNumber(num) {
@@ -169,7 +184,7 @@ function prewiewVideoGet(videoSRC) {
         videoM.src = videoSRC;
         videoM.muted = true; 
         videoM.load(); 
-        videoM.currentTime = currentVideoTime; // Set video to last known time
+        videoM.currentTime = currentVideoTime; 
         
         videoM.play()
             .then(() => console.log('Video is playing'))
@@ -179,11 +194,11 @@ function prewiewVideoGet(videoSRC) {
 
         video1 = videoSRC;
     } else {
-        videoM.currentTime = currentVideoTime; // Resume from where it left off
+        videoM.currentTime = currentVideoTime; 
         videoM.play();
     }
 
     videoM.addEventListener('timeupdate', () => {
-        currentVideoTime = videoM.currentTime; // Update current time
+        currentVideoTime = videoM.currentTime; 
     });
 }

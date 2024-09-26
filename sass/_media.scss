@@ -1,5 +1,8 @@
 /* MEDİA QERYS */
 @media (min-width: 575.98px) { 
+    .video-item-cont {
+        width: 70% !important;
+    }
     html {
         font-size: 22px;
     }
@@ -9,10 +12,9 @@
 }
 
 @media (min-width: 767.98px) { 
-    .video-item {
-        width: 425px !important;
+    .video-item-cont {
+        width: 40% !important;
     }
-
     html {
         font-size: 23px;
     }
@@ -26,8 +28,11 @@
 }
 
 @media (min-width: 991.98px) { 
+    .video-item-cont {
+        width: 40% !important;
+    }
     html {
-        font-size: 24px;
+        font-size: 24px !important;
     }
     .container {
         width: 84%;
@@ -38,10 +43,9 @@
 }
 
 @media (min-width: 1199.98px) { 
-    .video-item {
-        width: 450px !important;
+    .video-item-cont {
+        width: 24% !important;
     }
-
     html {
         font-size: 25px;
     }
@@ -51,6 +55,9 @@
 }
 
 @media (min-width: 1399.98px) { 
+    .video-item-cont {
+        width: 24%;
+    }
     html {
         font-size: 26px;
     }
