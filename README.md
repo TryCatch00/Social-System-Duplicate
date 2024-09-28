@@ -6,13 +6,13 @@ An open source project inspired by social media projects.
 <div align="center">
   <table>
     <tr>
-      <td><p align="center"><a href="#" align="center">v0.0.3</a></p></td>
+      <td><p align="center"><a href="#" align="center">In Development</a></p></td>
     </tr>
     <tr>
-      <td><p align="center"><a href="#" align="center">Alpha v0.0.2</a></p></td>
+      <td><p align="center"><a href="#" align="center">In Development</a></p></td>
     </tr>
     <tr>
-      <td><p align="center"><a href="#" align="center">Pre-Alpha v0.0.1</a></p></td>
+      <td><p align="center"><a href="#" align="center">In Development</a></p></td>
     </tr>
   </table>
 </div>
